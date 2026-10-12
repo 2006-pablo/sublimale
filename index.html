@@ -1,0 +1,104 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubliMale - Sublimados Personalizados</title>
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navegación -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="img/Sublimale_fondo_transparente-1.png"  alt="SubliMale Logo">
+            </div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Productos</a>
+                <a href="#footer-container"> Contactenos</a> 
+            </nav>
+            <div class="cart-icon-wrapper" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Banner de Presentación -->
+    <section id="inicio" class="hero">
+        <div class="banner">
+            <img src="img/file_000000008efc820e897983bc801560da.png" width="1400" height="500" alt="banner de sublimale"
+         
+
+        >
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section id="catalogo" class="products-section">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <p class="section-subtitle">Selecciona los productos que quieras y agregalos al carrito</p>
+        
+        <div class="products-grid" id="products-container">
+            <!-- Los productos se cargan dinámicamente desde JavaScript -->
+        </div>
+    </section>
+
+    <!-- Modal / Drawer del Carrito de Compras -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3><i class="fa-solid fa-cart-shopping"></i> Tu Carrito</h3>
+                <span class="close-btn" onclick="toggleCart()">&times;</span>
+            </div>
+            <div class="cart-body" id="cart-items">
+                <p class="empty-cart-msg">El carrito está vacío</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <strong id="cart-total-price">$0</strong>
+                </div>
+                <button class="btn-checkout" onclick="sendOrderWhatsApp()">
+                    <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footer-container">
+            <div class="footer-info">
+                <h3>SubliMale</h3>
+                <p>Sublimados Personalizados de Alta Calidad.</p>
+                       <p>INCAHUASI 169-VILLA MARIA-CORDOBA ARGENTINA.</p>
+            </div>
+            <div id="footer-social">
+         <!-- Botón flotante de Instagram -->
+<a href="https://www.instagram.com/sublimale_vm/?hl=es" class="ig-float" target="_blank" title="¡Seguinos en Instagram!">
+    <i class="fa-brands fa-instagram"></i>
+</a>
+               <!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/5493534771950" class="whatsapp-float" target="_blank" title="¡Escribinos por WhatsApp!">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SubliMale - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
